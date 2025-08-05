@@ -6,9 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src --ext ts,tsx,js,jsx",
-    "lint:fix": "eslint src --ext ts,tsx,js,jsx --fix",
-    "format": "prettier src --write"
+    "lint": "eslint app --ext ts,tsx,js,jsx",
+    "lint:fix": "eslint app --ext ts,tsx,js,jsx --fix",
+    "format": "prettier app --write"
   },
   "dependencies": {
     "lint-staged": "^16.1.4",
