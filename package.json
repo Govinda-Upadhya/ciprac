@@ -11,6 +11,7 @@
     "format": "prettier src --write"
   },
   "dependencies": {
+    "lint-staged": "^16.1.4",
     "next": "15.4.5",
     "react": "19.1.0",
     "react-dom": "19.1.0"
@@ -28,5 +29,11 @@
     "husky": "^9.1.7",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx}": [
+      "npm run lint",
+      "npm run format"
+    ]
   }
 }
