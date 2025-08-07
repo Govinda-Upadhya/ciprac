@@ -28,7 +28,8 @@ const eslintConfig = [
       },
     },
     rules: {
-      'prettier/prettier': 'warn', // or 'error'
+      'prettier/prettier': 'warn',
+      'no-undef': 'error', // or 'error'
     },
   },
 ];
