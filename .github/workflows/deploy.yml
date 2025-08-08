@@ -10,7 +10,11 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Execute remote SSH commands using SSH key
+        uses: appleboy/ssh-action@v1
         with:
-          node-version: '22.16.0'
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: whoami
