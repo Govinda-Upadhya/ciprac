@@ -19,7 +19,8 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ciprac
-            git pull
+            git pull origin main
             npm install
             npm run build
+            pm2 stop next-app
             pm2 start npm --name "next-app" -- start
